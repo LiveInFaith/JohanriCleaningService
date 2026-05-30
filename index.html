@@ -724,6 +724,82 @@
     nav ul { gap: 1.2rem; }
     .nav-logo { font-size: 1rem; }
   }
+
+  /* ── FORCE LIGHT MODE — override any browser/OS dark mode ── */
+  @media (prefers-color-scheme: dark) {
+    html, body {
+      background: #fdfaf6 !important;
+      color: #2c2c2c !important;
+    }
+    body * {
+      background-color: revert;
+      color: revert;
+      border-color: revert;
+    }
+    nav {
+      background: rgba(253,250,246,0.92) !important;
+      color: #2c2c2c !important;
+    }
+    nav ul a { color: #6b6b6b !important; }
+    nav ul a:hover { color: #c9647e !important; }
+    .nav-logo { color: #c9647e !important; }
+    .nav-logo span { color: #2c2c2c !important; }
+    #home { background: #fdfaf6 !important; }
+    h1, h2, h3, h4, p, span, label, div { color: revert; }
+    h1 { color: #2c2c2c !important; }
+    h1 em { color: #c9647e !important; }
+    .hero-sub { color: #6b6b6b !important; }
+    .hero-eyebrow { color: #c9647e !important; }
+    .stats-bar { background: #c9647e !important; color: white !important; }
+    .stat-num, .stat-label { color: white !important; }
+    .about-strip { background: transparent !important; }
+    .about-strip h2 { color: #2c2c2c !important; }
+    .about-strip h2 em { color: #c9647e !important; }
+    .about-strip p { color: #6b6b6b !important; }
+    .trait { background: #ffffff !important; border-color: rgba(201,100,126,0.3) !important; }
+    .trait-text { color: #2c2c2c !important; }
+    #services { background: #fef8fa !important; }
+    .section-eyebrow { color: #c9647e !important; }
+    .section-header h2 { color: #2c2c2c !important; }
+    .section-header h2 em { color: #c9647e !important; }
+    .section-header p { color: #6b6b6b !important; }
+    .service-card { background: #ffffff !important; border-color: rgba(201,100,126,0.2) !important; }
+    .service-card.natural { background: #eef6f1 !important; }
+    .sc-name { color: #2c2c2c !important; }
+    .sc-desc { color: #6b6b6b !important; }
+    .sc-icon { background: #fdf0f3 !important; }
+    .sc-badge { background: #fdf0f3 !important; color: #c9647e !important; }
+    .price-tag.std { background: #eef6f1 !important; color: #085041 !important; }
+    .price-tag.intro { background: #faeeda !important; color: #633806 !important; }
+    .price-tag-label { color: #adadad !important; }
+    .sub-items { color: #6b6b6b !important; }
+    #contact { background: #fdfaf6 !important; }
+    .contact-text h2 { color: #2c2c2c !important; }
+    .contact-text h2 em { color: #c9647e !important; }
+    .contact-text p { color: #6b6b6b !important; }
+    .contact-item { background: #fef8fa !important; border-color: rgba(201,100,126,0.2) !important; }
+    .contact-item:hover { background: #fdf0f3 !important; }
+    .ci-label { color: #adadad !important; }
+    .ci-value { color: #2c2c2c !important; }
+    .ci-icon { background: #c9647e !important; }
+    .contact-form { background: #ffffff !important; border-color: rgba(201,100,126,0.2) !important; }
+    .contact-form h3 { color: #2c2c2c !important; }
+    .form-group label { color: #6b6b6b !important; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: #fef8fa !important;
+      color: #2c2c2c !important;
+      border-color: rgba(201,100,126,0.3) !important;
+    }
+    .legend-pill { color: #6b6b6b !important; }
+    .section-label { color: #adadad !important; }
+    footer { background: #2c2c2c !important; color: rgba(255,255,255,0.5) !important; }
+    footer strong { color: #e8a0b0 !important; }
+    .badge { background: #fdf0f3 !important; color: #c9647e !important; }
+    .badge.green { background: #eef6f1 !important; color: #4a8a5e !important; }
+    .tip-box, [style*="background: var(--rose-deep)"] { background: #c9647e !important; }
+  }
 </style>
 </head>
 <body>
