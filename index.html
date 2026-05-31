@@ -458,7 +458,7 @@
     align-items: center;
     gap: 0.6rem;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.08rem;
     color: var(--charcoal);
     flex: 1;
   }
@@ -494,18 +494,18 @@
   }
 
   .price-tag {
-    font-size: 0.86rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 6px;
     white-space: nowrap;
   }
 
-  .price-tag.std { background: #eef6f1; color: #085041; }
+  .price-tag.std { background: #eef6f1; color: #085041; border: 1.5px solid #1D9E75; }
   .price-tag.intro { background: #fdf3c0; color: #7a5c00; border: 1px solid #e8c020; }
 
   .price-tag-label {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     color: var(--light);
     display: block;
     margin-top: 1px;
@@ -513,15 +513,15 @@
   }
 
   .sc-desc {
-    font-size: 0.9rem;
+    font-size: 0.97rem;
     color: var(--mid);
-    line-height: 1.65;
+    line-height: 1.7;
     font-weight: 300;
   }
 
   .sub-items {
     margin-top: 0.6rem;
-    font-size: 0.82rem;
+    font-size: 0.88rem;
     color: var(--light);
     line-height: 1.8;
   }
@@ -769,7 +769,7 @@
     .sc-desc { color: #6b6b6b !important; }
     .sc-icon { background: #fdf0f3 !important; }
     .sc-badge { background: #fdf0f3 !important; color: #c9647e !important; }
-    .price-tag.std { background: #eef6f1 !important; color: #085041 !important; }
+    .price-tag.std { background: #eef6f1 !important; color: #085041 !important; border: 1.5px solid #1D9E75 !important; }
     .price-tag.intro { background: #fdf3c0 !important; color: #7a5c00 !important; }
     .price-tag-label { color: #adadad !important; }
     .sub-items { color: #6b6b6b !important; }
@@ -1118,7 +1118,7 @@
 <section id="organizing" style="background:var(--cream); padding:6rem 2rem;">
   <div class="section-header reveal">
     <div class="section-eyebrow">Beyond Cleaning</div>
-    <h2>Home <em>Organizing</em></h2>
+    <h2>Organizing Services & <em>Pricing</em></h2>
     <p>A clean home is just the beginning. Johanri can transform cluttered, chaotic spaces into beautifully organized, functional areas you'll actually enjoy using.</p>
   </div>
 
@@ -1138,9 +1138,8 @@
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:0.4rem;">Tier 1</div>
         <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--charcoal);margin-bottom:0.4rem;">Normal Organising</div>
         <div style="font-size:0.87rem;color:var(--mid);line-height:1.7;">Sort, declutter, and neatly arrange existing items — no containers or products needed. Perfect for a quick reset that makes a big difference.</div>
-        <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#eef6f1;color:#085041;">R150–R300 per space</span>
-          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#fdf3c0;color:#7a5c00;border:1px solid #e8c020;">R120–R240 opening special</span>
+        <div style="margin-top:0.75rem;">
+          <span style="font-size:0.82rem;color:#6b6b6b;font-style:italic;">💬 Price determined on assessment</span>
         </div>
       </div>
 
@@ -1149,9 +1148,8 @@
         <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:0.4rem;">Tier 2</div>
         <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--charcoal);margin-bottom:0.4rem;">Containers & Labelling</div>
         <div style="font-size:0.87rem;color:var(--mid);line-height:1.7;">Full organizing system with containers, dividers, and custom labels — every item has a home. Containers quoted separately based on your space.</div>
-        <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#eef6f1;color:#085041;">R300–R600 per space</span>
-          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#fdf3c0;color:#7a5c00;border:1px solid #e8c020;">R240–R480 opening special</span>
+        <div style="margin-top:0.75rem;">
+          <span style="font-size:0.82rem;color:#6b6b6b;font-style:italic;">💬 Price determined on assessment</span>
         </div>
       </div>
     </div>
@@ -1164,10 +1162,7 @@
       <div class="sc-top">
         <div class="sc-name"><div class="sc-icon">👗</div>Clothing closet</div>
       </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R150–R600</div><span class="price-tag-label">tier 1 → tier 2</span></div>
-        <div><div class="price-tag intro">R120–R480</div><span class="price-tag-label">opening special</span></div>
-      </div>
+      <div style="margin-bottom:0.6rem;font-size:0.88rem;color:#6b6b6b;font-style:italic;">💬 Price determined on assessment</div>
       <div class="sc-desc">Sort and declutter clothing, fold and arrange by category, or a full system with dividers, containers, and labels so every item has a place.</div>
     </div>
 
@@ -1175,10 +1170,7 @@
       <div class="sc-top">
         <div class="sc-name"><div class="sc-icon">🧺</div>Linen closet</div>
       </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R150–R450</div><span class="price-tag-label">tier 1 → tier 2</span></div>
-        <div><div class="price-tag intro">R120–R360</div><span class="price-tag-label">opening special</span></div>
-      </div>
+      <div style="margin-bottom:0.6rem;font-size:0.88rem;color:#6b6b6b;font-style:italic;">💬 Price determined on assessment</div>
       <div class="sc-desc">Sheets, towels, and bedding sorted, folded neatly, and arranged by size or room — or fully containerised so everything is always easy to find.</div>
     </div>
 
@@ -1186,10 +1178,7 @@
       <div class="sc-top">
         <div class="sc-name"><div class="sc-icon">🥫</div>Pantry</div>
       </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R200–R550</div><span class="price-tag-label">tier 1 → tier 2</span></div>
-        <div><div class="price-tag intro">R160–R440</div><span class="price-tag-label">opening special</span></div>
-      </div>
+      <div style="margin-bottom:0.6rem;font-size:0.88rem;color:#6b6b6b;font-style:italic;">💬 Price determined on assessment</div>
       <div class="sc-desc">Group food items by category, check expiry dates, and arrange for easy access — or a full system with canisters, baskets, and labels for a pantry you'll love opening.</div>
     </div>
 
@@ -1197,10 +1186,7 @@
       <div class="sc-top">
         <div class="sc-name"><div class="sc-icon">🍳</div>Kitchen</div>
       </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R200–R600</div><span class="price-tag-label">tier 1 → tier 2</span></div>
-        <div><div class="price-tag intro">R160–R480</div><span class="price-tag-label">opening special</span></div>
-      </div>
+      <div style="margin-bottom:0.6rem;font-size:0.88rem;color:#6b6b6b;font-style:italic;">💬 Price determined on assessment</div>
       <div class="sc-desc">Cupboards, drawers, and counters organised by function — or a complete system with drawer dividers, container sets, and labels for a kitchen that works beautifully.</div>
     </div>
 
