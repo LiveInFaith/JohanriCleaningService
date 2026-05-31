@@ -418,7 +418,7 @@
   }
 
   .legend-dot.std { background: #1D9E75; }
-  .legend-dot.intro { background: var(--rose-deep); }
+  .legend-dot.intro { background: #e8c020; }
 
   .services-grid {
     max-width: 1100px;
@@ -458,7 +458,7 @@
     align-items: center;
     gap: 0.6rem;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--charcoal);
     flex: 1;
   }
@@ -494,7 +494,7 @@
   }
 
   .price-tag {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     font-weight: 500;
     padding: 3px 10px;
     border-radius: 6px;
@@ -502,7 +502,7 @@
   }
 
   .price-tag.std { background: #eef6f1; color: #085041; }
-  .price-tag.intro { background: #faeeda; color: #633806; }
+  .price-tag.intro { background: #fdf3c0; color: #7a5c00; border: 1px solid #e8c020; }
 
   .price-tag-label {
     font-size: 0.68rem;
@@ -513,7 +513,7 @@
   }
 
   .sc-desc {
-    font-size: 0.83rem;
+    font-size: 0.9rem;
     color: var(--mid);
     line-height: 1.65;
     font-weight: 300;
@@ -521,7 +521,7 @@
 
   .sub-items {
     margin-top: 0.6rem;
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--light);
     line-height: 1.8;
   }
@@ -770,7 +770,7 @@
     .sc-icon { background: #fdf0f3 !important; }
     .sc-badge { background: #fdf0f3 !important; color: #c9647e !important; }
     .price-tag.std { background: #eef6f1 !important; color: #085041 !important; }
-    .price-tag.intro { background: #faeeda !important; color: #633806 !important; }
+    .price-tag.intro { background: #fdf3c0 !important; color: #7a5c00 !important; }
     .price-tag-label { color: #adadad !important; }
     .sub-items { color: #6b6b6b !important; }
     #contact { background: #fdfaf6 !important; }
@@ -809,7 +809,9 @@
   <div class="nav-logo">Johanri's <span>Premium Cleaning</span></div>
   <ul>
     <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="#services">Cleaning</a></li>
+    <li><a href="#organizing">Organizing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -881,13 +883,13 @@
 <section id="services">
   <div class="section-header reveal">
     <div class="section-eyebrow">What we offer</div>
-    <h2>Services & <em>Pricing</em></h2>
+    <h2>Cleaning Services & <em>Pricing</em></h2>
     <p>All prices are approximately 35% below national average — quality work at Kimberley-fair prices.</p>
   </div>
 
   <div class="price-legend reveal">
     <div class="legend-pill"><div class="legend-dot std"></div>Standard Kimberley rate</div>
-    <div class="legend-pill"><div class="legend-dot intro"></div>Introductory rate (first 10 clients)</div>
+    <div class="legend-pill"><div class="legend-dot intro"></div>Opening special (first 10 clients)</div>
   </div>
 
   <div class="services-grid">
@@ -900,7 +902,7 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R910 – R1,170</div><span class="price-tag-label">standard rate</span></div>
-        <div><div class="price-tag intro">R730 – R940</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R730 – R940</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">Thorough top-to-bottom clean of all rooms. Bathrooms, kitchen surfaces, floors, windows inside, skirting boards, light switches. Smaller homes done in 1 day, larger or heavier cleans take 2.</div>
     </div>
@@ -912,115 +914,11 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R1,820 – R2,340</div><span class="price-tag-label">standard rate</span></div>
-        <div><div class="price-tag intro">R1,460 – R1,870</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R1,460 – R1,870</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">The signature offering — unhurried, meticulous work with no corner left untouched. Includes oven interior, fridge, inside all cupboards, braai area, stoep and patio.</div>
     </div>
 
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">🚪</div>Move-out / end of tenancy</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R1,170 – R2,280</div><span class="price-tag-label">standard rate</span></div>
-        <div><div class="price-tag intro">R940 – R1,820</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Property left spotless for new tenants or landlord inspection. Full property including inside all appliances.</div>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">🏗️</div>Move-in / new homeowner clean</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R980 – R1,820</div><span class="price-tag-label">standard rate</span></div>
-        <div><div class="price-tag intro">R780 – R1,460</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Fresh start before furniture arrives. Great for new builds or homes with paint dust and construction residue.</div>
-    </div>
-
-    <!-- Steam services -->
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">💧</div>Tile & grout steam clean — bathroom</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R230 – R390</div><span class="price-tag-label">per bathroom</span></div>
-        <div><div class="price-tag intro">R180 – R310</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">High-pressure steam blasts grime and mould from grout lines. The before & after results speak for themselves.</div>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">💧</div>Tile & grout steam clean — kitchen</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R260 – R460</div><span class="price-tag-label">per kitchen</span></div>
-        <div><div class="price-tag intro">R210 – R370</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Floor tiles, backsplash, and around the stove where grease builds up most. Steam cuts through without harsh chemicals.</div>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">🔥</div>Oven & stovetop deep steam clean</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R260 – R390</div><span class="price-tag-label">per oven</span></div>
-        <div><div class="price-tag intro">R210 – R310</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Baked-on grease from oven interior, racks, door glass, and stovetop steam-cleaned to like-new condition.</div>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">💧</div>Tile & grout — full home</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R590 – R980</div><span class="price-tag-label">whole property</span></div>
-        <div><div class="price-tag intro">R470 – R780</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">All tiled areas throughout the entire home. Can also be priced per m² at R5–R10/m².</div>
-    </div>
-
-    <!-- Extraction services -->
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">🛋️</div>Couch / sofa deep clean</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R130 – R290</div><span class="price-tag-label">per seater</span></div>
-        <div><div class="price-tag intro">R100 – R230</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Deep extraction removes dust, allergens, pet hair, odours and stains from fabric upholstery.</div>
-      <div class="sub-items">2-seater R260–R460 &nbsp;·&nbsp; 3-seater R390–R690 &nbsp;·&nbsp; L-shape R590–R980 &nbsp;·&nbsp; Armchair R130–R230</div>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">🛏️</div>Mattress deep clean</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R200 – R390</div><span class="price-tag-label">per mattress</span></div>
-        <div><div class="price-tag intro">R160 – R310</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Removes dust mites, allergens and odours. A health benefit most clients don't realise they need.</div>
-      <div class="sub-items">Single R200–R260 &nbsp;·&nbsp; Double/Queen R260–R330 &nbsp;·&nbsp; King R330–R390</div>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="sc-top">
-        <div class="sc-name"><div class="sc-icon">🪣</div>Carpet cleaning</div>
-      </div>
-      <div class="sc-prices">
-        <div><div class="price-tag std">R130 – R260</div><span class="price-tag-label">per room</span></div>
-        <div><div class="price-tag intro">R100 – R210</div><span class="price-tag-label">intro rate</span></div>
-      </div>
-      <div class="sc-desc">Extraction clean for wall-to-wall carpets. R10–R16/m². 3-bed full house R520–R720. Stain removal add-on +R65–R130.</div>
-    </div>
-
-    <!-- Natural clean highlight card -->
     <div class="service-card natural reveal">
       <div class="sc-top">
         <div class="sc-name"><div class="sc-icon green-icon">🌿</div>All-natural chemical-free clean</div>
@@ -1032,6 +930,123 @@
       <div class="sc-desc">Prefer no chemicals in your home? Johanri offers a fully natural cleaning option using only plant-based and food-safe ingredients — vinegar, bicarbonate of soda, lemon, essential oils, and castile soap. Perfect for homes with young children, pets, or allergy sufferers. Just ask when booking.</div>
     </div>
 
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🚪</div>Move-out / end of tenancy</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R1,170 – R2,280</div><span class="price-tag-label">standard rate</span></div>
+        <div><div class="price-tag intro">R940 – R1,820</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Property left spotless for new tenants or landlord inspection. Full property including inside all appliances.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🏗️</div>Move-in / new homeowner clean</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R980 – R1,820</div><span class="price-tag-label">standard rate</span></div>
+        <div><div class="price-tag intro">R780 – R1,460</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Fresh start before furniture arrives. Great for new builds or homes with paint dust and construction residue.</div>
+    </div>
+
+    <!-- Steam services -->
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">💧</div>Tile & grout steam clean — bathroom</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R230 – R390</div><span class="price-tag-label">per bathroom</span></div>
+        <div><div class="price-tag intro">R180 – R310</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">High-pressure steam blasts grime and mould from grout lines. The before & after results speak for themselves.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">💧</div>Tile & grout steam clean — kitchen</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R260 – R460</div><span class="price-tag-label">per kitchen</span></div>
+        <div><div class="price-tag intro">R210 – R370</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Floor tiles, backsplash, and around the stove where grease builds up most. Steam cuts through without harsh chemicals.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🔥</div>Oven & stovetop deep steam clean</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R260 – R390</div><span class="price-tag-label">per oven</span></div>
+        <div><div class="price-tag intro">R210 – R310</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Baked-on grease from oven interior, racks, door glass, and stovetop steam-cleaned to like-new condition.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">💧</div>Tile & grout — full home</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R590 – R980</div><span class="price-tag-label">whole property</span></div>
+        <div><div class="price-tag intro">R470 – R780</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">All tiled areas throughout the entire home. Can also be priced per m² at R5–R10/m².</div>
+    </div>
+
+    <!-- Extraction services -->
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🛋️</div>Couch / sofa deep clean</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R130 – R290</div><span class="price-tag-label">per seater</span></div>
+        <div><div class="price-tag intro">R100 – R230</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Deep extraction removes dust, allergens, pet hair, odours and stains from fabric upholstery.</div>
+      <div class="sub-items">2-seater R260–R460 &nbsp;·&nbsp; 3-seater R390–R690 &nbsp;·&nbsp; L-shape R590–R980 &nbsp;·&nbsp; Armchair R130–R230</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🛏️</div>Mattress & Headboard clean</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R200 – R390</div><span class="price-tag-label">per mattress</span></div>
+        <div><div class="price-tag intro">R160 – R310</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Removes dust mites, allergens and odours. A health benefit most clients don't realise they need.</div>
+      <div class="sub-items">Single R200–R260 &nbsp;·&nbsp; Double/Queen R260–R330 &nbsp;·&nbsp; King R330–R390<br>Headboard: Single R100–R130 &nbsp;·&nbsp; Double/Queen R130–R165 &nbsp;·&nbsp; King R165–R195</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🪣</div>Carpet cleaning</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R130 – R260</div><span class="price-tag-label">per room</span></div>
+        <div><div class="price-tag intro">R100 – R210</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Extraction clean for wall-to-wall carpets. R10–R16/m². 3-bed full house R520–R720. Stain removal add-on +R65–R130.</div>
+    </div>
+
+    <!-- Natural clean highlight card -->
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">👕</div>Laundry & ironing</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R180 – R350</div><span class="price-tag-label">standard rate</span></div>
+        <div><div class="price-tag intro">R145 – R280</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Washing, drying, folding, and ironing done with the same care and attention she gives every part of your home. Add-on to any clean or as a standalone service.</div>
+      <div class="sub-items">Wash & fold per load: R80–R120 &nbsp;·&nbsp; Ironing per basket: R100–R160 &nbsp;·&nbsp; Full laundry day: R180–R350</div>
+    </div>
+
     <!-- Add-ons -->
     <div class="service-card reveal">
       <div class="sc-top">
@@ -1039,7 +1054,7 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R200 – R330</div><span class="price-tag-label">per bathroom</span></div>
-        <div><div class="price-tag intro">R160 – R260</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R160 – R260</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">Full sanitisation including behind and under the toilet, shower, taps, and all fixtures. Great for rentals or post-illness.</div>
     </div>
@@ -1050,7 +1065,7 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R330 – R590</div><span class="price-tag-label">nursery + adjoining</span></div>
-        <div><div class="price-tag intro">R260 – R470</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R260 – R470</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">Chemical-free steam only. Mattress, carpets, and all surfaces. Very popular with expectant parents.</div>
     </div>
@@ -1061,7 +1076,7 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R980 – R1,950</div><span class="price-tag-label">full property</span></div>
-        <div><div class="price-tag intro">R780 – R1,560</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R780 – R1,560</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">Construction dust, paint splatter, adhesive residue, tile grout residue, and window clean. Labour-intensive — done properly.</div>
     </div>
@@ -1072,7 +1087,7 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R520 – R980</div><span class="price-tag-label">full home</span></div>
-        <div><div class="price-tag intro">R420 – R780</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R420 – R780</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">Disinfection-focused clean after illness. High-touch surfaces, steam sanitising, hospital-grade disinfectant throughout.</div>
     </div>
@@ -1083,7 +1098,7 @@
       </div>
       <div class="sc-prices">
         <div><div class="price-tag std">R130 – R230</div><span class="price-tag-label">per unit</span></div>
-        <div><div class="price-tag intro">R100 – R180</div><span class="price-tag-label">intro rate</span></div>
+        <div><div class="price-tag intro">R100 – R180</div><span class="price-tag-label">opening special</span></div>
       </div>
       <div class="sc-desc">Shelves soaked and scrubbed, interior sanitised, seals cleaned, exterior wiped. Client removes food beforehand.</div>
     </div>
@@ -1095,7 +1110,112 @@
     <div style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; opacity:0.8; margin-bottom:0.5rem;">Best value bundle</div>
     <div style="font-family:'Playfair Display',serif; font-size:1.25rem; margin-bottom:0.4rem;">Complete Home Reset</div>
     <div style="font-size:0.9rem; opacity:0.9; margin-bottom:0.8rem;">3–4 day deep clean + full grout steam + all mattresses + couch</div>
-    <div style="font-size:1.1rem; font-weight:500;">Standard R3,000–R4,200 &nbsp;·&nbsp; Intro rate R2,400–R3,360</div>
+    <div style="font-size:1.1rem; font-weight:500;">Standard R3,000–R4,200 &nbsp;·&nbsp; Opening special R2,400–R3,360</div>
+  </div>
+</section>
+
+<!-- ORGANIZING SECTION -->
+<section id="organizing" style="background:var(--cream); padding:6rem 2rem;">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Beyond Cleaning</div>
+    <h2>Home <em>Organizing</em></h2>
+    <p>A clean home is just the beginning. Johanri can transform cluttered, chaotic spaces into beautifully organized, functional areas you'll actually enjoy using.</p>
+  </div>
+
+  <div style="max-width:1100px; margin:0 auto 2rem;">
+    <div class="price-legend reveal">
+      <div class="legend-pill"><div class="legend-dot std"></div>Standard Kimberley rate</div>
+      <div class="legend-pill"><div class="legend-dot intro"></div>Opening special (first 10 clients)</div>
+    </div>
+  </div>
+
+  <!-- Tier labels -->
+  <div style="max-width:1100px;margin:0 auto 1rem;" class="reveal">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+
+      <!-- TIER 1 -->
+      <div style="background:var(--rose-light);border:2px solid var(--rose-deep);border-radius:16px;padding:1.25rem 1.5rem;">
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:0.4rem;">Tier 1</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--charcoal);margin-bottom:0.4rem;">Normal Organising</div>
+        <div style="font-size:0.87rem;color:var(--mid);line-height:1.7;">Sort, declutter, and neatly arrange existing items — no containers or products needed. Perfect for a quick reset that makes a big difference.</div>
+        <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#eef6f1;color:#085041;">R150–R300 per space</span>
+          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#fdf3c0;color:#7a5c00;border:1px solid #e8c020;">R120–R240 opening special</span>
+        </div>
+      </div>
+
+      <!-- TIER 2 -->
+      <div style="background:var(--rose-light);border:2px solid var(--rose-deep);border-radius:16px;padding:1.25rem 1.5rem;">
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:0.4rem;">Tier 2</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--charcoal);margin-bottom:0.4rem;">Containers & Labelling</div>
+        <div style="font-size:0.87rem;color:var(--mid);line-height:1.7;">Full organizing system with containers, dividers, and custom labels — every item has a home. Containers quoted separately based on your space.</div>
+        <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#eef6f1;color:#085041;">R300–R600 per space</span>
+          <span style="font-size:0.8rem;font-weight:500;padding:3px 10px;border-radius:6px;background:#fdf3c0;color:#7a5c00;border:1px solid #e8c020;">R240–R480 opening special</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Organizing spaces grid -->
+  <div class="services-grid" style="max-width:1100px;margin:1.25rem auto 0;">
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">👗</div>Clothing closet</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R150–R600</div><span class="price-tag-label">tier 1 → tier 2</span></div>
+        <div><div class="price-tag intro">R120–R480</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Sort and declutter clothing, fold and arrange by category, or a full system with dividers, containers, and labels so every item has a place.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🧺</div>Linen closet</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R150–R450</div><span class="price-tag-label">tier 1 → tier 2</span></div>
+        <div><div class="price-tag intro">R120–R360</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Sheets, towels, and bedding sorted, folded neatly, and arranged by size or room — or fully containerised so everything is always easy to find.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🥫</div>Pantry</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R200–R550</div><span class="price-tag-label">tier 1 → tier 2</span></div>
+        <div><div class="price-tag intro">R160–R440</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Group food items by category, check expiry dates, and arrange for easy access — or a full system with canisters, baskets, and labels for a pantry you'll love opening.</div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="sc-top">
+        <div class="sc-name"><div class="sc-icon">🍳</div>Kitchen</div>
+      </div>
+      <div class="sc-prices">
+        <div><div class="price-tag std">R200–R600</div><span class="price-tag-label">tier 1 → tier 2</span></div>
+        <div><div class="price-tag intro">R160–R480</div><span class="price-tag-label">opening special</span></div>
+      </div>
+      <div class="sc-desc">Cupboards, drawers, and counters organised by function — or a complete system with drawer dividers, container sets, and labels for a kitchen that works beautifully.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEFORE & AFTER GALLERY TEASER -->
+<section id="gallery-teaser" style="background:var(--rose-deep);padding:4rem 2rem;text-align:center;">
+  <div class="reveal">
+    <div style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:0.75rem;">See the results</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:white;margin-bottom:1rem;">Before & After <em style="font-style:italic;color:#fde8ef;">Transformations</em></h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 2rem;line-height:1.8;font-weight:300;">See exactly what Johanri's perfectionist touch looks like in real homes — the results speak for themselves.</p>
+    <a href="gallery.html" style="display:inline-flex;align-items:center;gap:0.6rem;background:white;color:var(--rose-deep);text-decoration:none;padding:0.9rem 2.2rem;border-radius:99px;font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(0,0,0,0.15);" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+      📸 View Before & After Pictures
+    </a>
   </div>
 </section>
 
@@ -1156,13 +1276,16 @@
         <option>Move-in / new homeowner</option>
         <option>Tile & grout steam clean</option>
         <option>Couch / sofa cleaning</option>
-        <option>Mattress cleaning</option>
+        <option>Mattress & headboard cleaning</option>
         <option>Carpet cleaning</option>
         <option>All-natural chemical-free clean</option>
+        <option>Laundry & ironing</option>
         <option>Post-renovation builders clean</option>
         <option>New baby / nursery prep</option>
         <option>Post-illness sanitisation</option>
         <option>Complete home reset bundle</option>
+        <option>Home organizing — normal</option>
+        <option>Home organizing — containers & labelling</option>
         <option>Other / not sure yet</option>
       </select>
     </div>
