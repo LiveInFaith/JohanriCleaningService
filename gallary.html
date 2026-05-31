@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Before & After | Johanri's Premium Cleaning</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rose: #e8a0b0;
+    --rose-deep: #c9647e;
+    --rose-light: #fdf0f3;
+    --rose-pale: #fef8fa;
+    --cream: #fdfaf6;
+    --charcoal: #2c2c2c;
+    --mid: #6b6b6b;
+    --light: #adadad;
+    color-scheme: light only;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; color-scheme: light only; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream) !important;
+    color: var(--charcoal) !important;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(253,250,246,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(232,160,176,0.2);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--rose-deep);
+    text-decoration: none;
+  }
+  .nav-logo span { font-style: italic; color: var(--charcoal); }
+
+  .nav-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--rose-deep); }
+
+  /* ── HERO ── */
+  .gallery-hero {
+    background: var(--rose-deep);
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+    color: white;
+  }
+
+  .gallery-hero .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.75rem;
+  }
+
+  .gallery-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 1rem;
+  }
+
+  .gallery-hero h1 em { font-style: italic; color: #fde8ef; }
+
+  .gallery-hero p {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.88;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* ── UPLOAD NOTICE ── */
+  .upload-notice {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .upload-notice .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .upload-notice h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+  }
+
+  .upload-notice p {
+    font-size: 0.95rem;
+    color: var(--mid);
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  /* ── GALLERY GRID ── */
+  .gallery-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem;
+  }
+
+  .category-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin: 3rem 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .category-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201,100,126,0.2);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* ── BEFORE/AFTER CARD ── */
+  .ba-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(201,100,126,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .ba-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(201,100,126,0.12);
+  }
+
+  .ba-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+
+  .ba-img-wrap {
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    background: var(--rose-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ba-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ba-label {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 99px;
+  }
+
+  .ba-label.before {
+    background: rgba(0,0,0,0.55);
+    color: white;
+  }
+
+  .ba-label.after {
+    background: var(--rose-deep);
+    color: white;
+  }
+
+  .ba-divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: white;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  .ba-divider::before {
+    content: '↔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid var(--rose-deep);
+    color: var(--rose-deep);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .ba-info {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(201,100,126,0.1);
+  }
+
+  .ba-info h4 {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0.25rem;
+  }
+
+  .ba-info p {
+    font-size: 0.8rem;
+    color: var(--mid);
+    font-weight: 300;
+  }
+
+  /* ── PLACEHOLDER CARD (empty slots for future photos) ── */
+  .ba-placeholder {
+    background: var(--rose-pale);
+    border: 2px dashed rgba(201,100,126,0.3);
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--light);
+    cursor: default;
+    transition: border-color 0.2s;
+  }
+
+  .ba-placeholder:hover { border-color: var(--rose-deep); }
+
+  .ba-placeholder .ph-icon { font-size: 2.5rem; }
+
+  .ba-placeholder p {
+    font-size: 0.82rem;
+    font-weight: 400;
+    text-align: center;
+    max-width: 160px;
+    line-height: 1.5;
+  }
+
+  /* ── HOW TO ADD PHOTOS ── */
+  .how-to {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    background: var(--rose-light);
+    border: 1px solid rgba(201,100,126,0.2);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .how-to h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .how-to ol {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--mid);
+    line-height: 2;
+    font-weight: 300;
+  }
+
+  .how-to ol li strong { color: var(--charcoal); font-weight: 500; }
+
+  /* ── BACK BUTTON ── */
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--rose-deep);
+    color: white;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 99px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .back-btn:hover { background: #b5546a; transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  footer strong { color: var(--rose); }
+
+  @media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Johanri's <span>Premium Cleaning</span></a>
+  <a href="index.html" class="nav-back">← Back to website</a>
+</nav>
+
+<!-- HERO -->
+<div class="gallery-hero">
+  <div class="eyebrow">Real results, real homes</div>
+  <h1>Before & After <em>Transformations</em></h1>
+  <p>Every home tells a story. Here's what Johanri's perfectionist touch looks like in practice.</p>
+</div>
+
+<div class="gallery-section">
+
+  <!-- HOW TO ADD PHOTOS -->
+  <div class="how-to" style="margin-top:3rem;">
+    <h3>📸 How to add your before & after photos</h3>
+    <ol>
+      <li><strong>Take photos</strong> before you start cleaning and after you finish each space</li>
+      <li><strong>Name your files</strong> clearly, e.g. <code>kitchen-before.jpg</code> and <code>kitchen-after.jpg</code></li>
+      <li><strong>Upload them</strong> to your GitHub repository in a folder called <code>photos/</code></li>
+      <li><strong>Send the filenames to Claude</strong> and the gallery cards will be updated with your real photos automatically</li>
+    </ol>
+  </div>
+
+  <!-- DEEP CLEANING -->
+  <div class="category-label">🧹 Deep cleaning</div>
+  <div class="gallery-grid">
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🏠</span>
+      <p>Living room before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🛁</span>
+      <p>Bathroom before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🍳</span>
+      <p>Kitchen before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🛏️</span>
+      <p>Bedroom before & after</p>
+    </div>
+
+  </div>
+
+  <!-- STEAM CLEANING -->
+  <div class="category-label">💧 Steam cleaning — tile & grout</div>
+  <div class="gallery-grid">
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🚿</span>
+      <p>Shower grout before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🪣</span>
+      <p>Floor tiles before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🔥</span>
+      <p>Oven before & after</p>
+    </div>
+
+  </div>
+
+  <!-- UPHOLSTERY & CARPETS -->
+  <div class="category-label">🛋️ Couches, carpets & mattresses</div>
+  <div class="gallery-grid">
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🛋️</span>
+      <p>Couch before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🪣</span>
+      <p>Carpet before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🛏️</span>
+      <p>Mattress before & after</p>
+    </div>
+
+  </div>
+
+  <!-- ORGANIZING -->
+  <div class="category-label">📦 Home organizing</div>
+  <div class="gallery-grid">
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">👗</span>
+      <p>Clothing closet before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🥫</span>
+      <p>Pantry before & after</p>
+    </div>
+
+    <div class="ba-placeholder">
+      <span class="ph-icon">🍳</span>
+      <p>Kitchen cupboards before & after</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:4rem;">
+    <a href="index.html" class="back-btn">← Back to main website</a>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Johanri's Premium Cleaning</strong> &nbsp;·&nbsp; Kimberley, Northern Cape &nbsp;·&nbsp; 072 337 6526
+</footer>
+
+</body>
+</html>
