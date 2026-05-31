@@ -430,7 +430,7 @@
     background: white;
     border-radius: 16px;
     padding: 1.5rem;
-    border: 1px solid rgba(232,160,176,0.15);
+    border: 1.5px solid rgba(201,100,126,0.35);
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
@@ -440,14 +440,16 @@
   }
 
   .service-card.featured {
-    border: 2.5px solid #e91e8c;
-    box-shadow: 0 6px 24px rgba(233,30,140,0.2);
+    border: 2px solid #e8609a;
+    box-shadow: 0 0 8px rgba(232,96,154,0.2);
+    outline: none;
   }
 
   .service-card.natural {
     background: var(--green-light);
-    border: 2.5px solid #0a8c4e;
-    box-shadow: 0 6px 24px rgba(10,140,78,0.2);
+    border: 2px solid #3aaa6e;
+    box-shadow: 0 0 8px rgba(58,170,110,0.2);
+    outline: none;
   }
 
   .sc-top {
@@ -704,6 +706,62 @@
     transform: translateY(0);
   }
 
+  /* ── HAMBURGER MENU ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+    z-index: 101;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: var(--charcoal);
+    border-radius: 99px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0; right: 0;
+    background: rgba(253,250,246,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(232,160,176,0.2);
+    padding: 1rem 2rem 1.5rem;
+    z-index: 99;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(232,160,176,0.15);
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--rose-deep); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     #home {
@@ -721,7 +779,8 @@
     .stats-bar { padding: 1.5rem; gap: 2rem; flex-wrap: wrap; }
     #contact { grid-template-columns: 1fr; gap: 3rem; }
     .form-row { grid-template-columns: 1fr; }
-    nav ul { gap: 1.2rem; }
+    nav ul { display: none; }
+    .hamburger { display: flex; }
     .nav-logo { font-size: 1rem; }
   }
 
@@ -764,11 +823,13 @@
     .section-header h2 em { color: #c9647e !important; }
     .section-header p { color: #6b6b6b !important; }
     .service-card { background: #ffffff !important; border-color: rgba(201,100,126,0.2) !important; }
-    .service-card.natural { background: #eef6f1 !important; }
+    .service-card.featured { border-color: #e8609a !important; }
+    .service-card.natural { background: #eef6f1 !important; border-color: #3aaa6e !important; }
     .sc-name { color: #2c2c2c !important; }
     .sc-desc { color: #6b6b6b !important; }
     .sc-icon { background: #fdf0f3 !important; }
     .sc-badge { background: #fdf0f3 !important; color: #c9647e !important; }
+    .service-card.natural .sc-badge { background: #d4ede0 !important; color: #2d6b45 !important; }
     .price-tag.std { background: #eef6f1 !important; color: #085041 !important; border: 1.5px solid #1D9E75 !important; }
     .price-tag.intro { background: #fdf3c0 !important; color: #7a5c00 !important; }
     .price-tag-label { color: #adadad !important; }
@@ -814,7 +875,19 @@
     <li><a href="gallery.html">Before & After</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home"        onclick="closeMenu()">Home</a>
+  <a href="#services"    onclick="closeMenu()">Cleaning</a>
+  <a href="#organizing"  onclick="closeMenu()">Organizing</a>
+  <a href="gallery.html" onclick="closeMenu()">Before & After</a>
+  <a href="#contact"     onclick="closeMenu()">Contact</a>
+</div>
 
 <!-- HERO -->
 <section id="home">
@@ -1295,6 +1368,27 @@
 </footer>
 
 <script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // Close menu on outside click
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
   // WhatsApp contact form
   function sendWhatsApp() {
     const name    = document.getElementById('wa-name').value.trim();
